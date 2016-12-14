@@ -253,12 +253,6 @@ class Report(HackerOneResource):
         return self.first_program_activity_at - self.created_at
 
     @property
-    def time_to_first_response(self):
-        if not self.first_program_activity_at:
-            return None
-        return self.first_program_activity_at - self.created_at
-
-    @property
     def html_url(self):
         return "https://hackerone.com/reports/%s" % self.id
 
